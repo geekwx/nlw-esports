@@ -6,9 +6,10 @@ Inter_700Bold,
 Inter_900Black } from '@expo-google-fonts/inter';
 
 
-import {Home} from './src/screens/Home'
+
 import { Background } from './src/components/Background';
 import { Loading } from './src/components/Loading';
+import { Routes } from './src/routes';
 
 
 
@@ -27,8 +28,8 @@ const [ fontsLoaded ] = useFonts({
       backgroundColor="transparent"
       translucent
       />
-      { fontsLoaded  ? <Home /> : <Loading />}
-
+      { fontsLoaded  ? <Routes /> : <Loading />}
+      
     </Background>
   );
 }

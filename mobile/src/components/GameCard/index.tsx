@@ -17,6 +17,9 @@ interface Props extends TouchableOpacityProps {
 
 
 export function GameCard({ data, ...rest }: Props) {
+
+
+
   return (
     <TouchableOpacity style={styles.container} {...rest}>
       <ImageBackground 
