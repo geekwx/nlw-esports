@@ -12,12 +12,15 @@ import logoImg from '../../assets/logo-nlw-esports.png';
 import { Heading } from '../../components/Heading';
 import { DuoCard, DuoCardProps } from '../../components/DuoCard';
 import { useEffect, useState } from 'react';
+import { DuoMatch } from '../../components/DuoMatch';
 
 export function Game(){
     const route = useRoute();
     const game = route.params as GameParams;
 
+
     const [duos, setDuos] = useState<DuoCardProps[]>([]);
+    const [discordDuoSelected, setDiscordDuoSelected] = useState('tret');
 
     useEffect(() => {
         // fetch('http://192.168.0.42:3333/games')
@@ -85,7 +88,11 @@ export function Game(){
                   ListEmptyComponent={() =>( <Text style={styles.emptyList}> Não há anuncios publicados ainda.</Text>)}
                     />
 
-
+                        <DuoMatch 
+                        visible={discordDuoSelected.length > 0}
+                        discord='rrte#1212'
+                        onClose={() => setDiscordDuoSelected('')}
+                        />
         </SafeAreaView>
         </Background>
     )
