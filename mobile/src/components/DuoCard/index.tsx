@@ -20,6 +20,7 @@ interface Props  {
 }
 
 export function DuoCard({ data, onConnect } : Props){
+
     return (
         <View style={styles.container}>
             <Duoinfo 
